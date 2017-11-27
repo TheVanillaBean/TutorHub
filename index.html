@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	
+	<head>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+		<link href="HonorsStylesheet.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+ 		<link rel="stylesheet" href="/resources/demos/style.css">
+
+		<script src="FormScript.js" type="text/javascript"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+			$( function() {
+    		$( "#datepicker" ).datepicker();
+  			} );
+		</script>
+		
+        <title>Colloquium Record Entry</title>
+
+	</head>
+
+	<body>
+		
+		<header>
+			<h1>Barrett Poly Colloquial Hub</h1>
+		</header>
+
+		<section id="Instructions">
+			<h2>Using this Website</h2>
+			<p>This site allows Colloquium tutors to quickly and easily enter information about students' tutoring sessions.  Simply enter the information requested in each field below and the data will be added to a spreadsheet.  An email will be sent to both the tutor and the student.  Hit 'Reset' to clear the form.</p>
+		</section>
+	
+		<section class="section-form">
+            <div class="row">
+                <form method="post" action="#" class="contact-form">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name">Tutor Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+							<input type="email" name="Tutor Email Address" id="name" placeholder="asurite@asu.edu" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">Student Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+							<input type="email" name="Student Email Address" id="email" placeholder="asurite@asu.edu" required>
+                        </div>
+                    </div> 
+					<div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">Date of Session</label>
+                        </div>
+                        <div class="col span-2-of-3">
+							<input type="text" name="Tutoring Session Date" id="datepicker" required>
+                        </div>
+                    </div>
+					<div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Student First Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+							<input type="text" name="Student's First Name" placeholder="John" required>
+                        </div>
+                    </div>
+					<div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Student Last Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+							<input type="text" name="Student's Last Name" placeholder="Doe" required>
+                        </div>
+                    </div>
+					<div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Tutor Name (First and last, separate multiple tutors with commas)</label>
+                        </div>
+                        <div class="col span-2-of-3">
+							<input type="text" name="Tutor Name" id="Base_Tutor_Name" placeholder="John Doe, Jane Doe, etc.">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Instructor</label>
+                        </div>
+                        <div class="col span-2-of-3">
+							<select name="Instructor">
+								<option value="none" selected>-Select One-</option>
+								<option value="Oberle">Dr. Oberle</option>
+								<option value="Martin">Dr. Martin</option>
+								<option value="Meloy">Dr. Meloy</option>
+							</select>
+                        </div>
+                    </div>
+					<div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Tutor Notes</label>
+                        </div>
+                        <div class="col span-2-of-3">
+							<textarea name="Tutor's Comments" rows="10" required placeholder="Be specific, yet succinct. Mention the concepts discussed and how they are used to connect the student's ideas."></textarea>
+						</div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+							<button onclick="join_tutors()" name="Submission">Submit</button>
+						<button type="reset" value="Reset">Reset</button>
+                        </div>
+                    </div>
+                    
+                </form>
+                
+            </div>
+        </section>
+		
+		<footer>
+		</footer>
+		
+		
+	</body>
+</html>
